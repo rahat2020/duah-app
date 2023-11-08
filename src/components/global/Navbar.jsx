@@ -3,7 +3,7 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div className="bg-white rounded-3xl px-4 dark:bg-dark-bg lg:h-[calc(100vh)] xl:h-[110vh] 2xl:h-[93vh] 3xl:h-[93vh]  pb-16">
+    <div className="bg-white rounded-3xl px-4 dark:bg-dark-bg lg:h-[calc(100vh)] xl:h-[110vh] 3xl:h-[93vh]  pb-16">
       <div className="pt-6 mb-6 xl:mb-1 2xl:mb-1 3xl:mb-24 container flex justify-center items-center">
         <Image src="/assets/logo.png" width={60} height={60} alt="logo" loading='lazy' />
       </div>

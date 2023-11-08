@@ -2,12 +2,11 @@ import React, { useState } from 'react'
 import Navbar from '../global/Navbar'
 import LeftSidebar from '../global/LeftSidebar'
 import RightSidebar from '../global/RightSidebar'
-import Topbar from '../global/Topbar'
 
 const RootLayout = ({ children }) => {
 
   return (
-    <main className='w-full flex justify-between items-start h-full p-8 bg-slate-200'>
+    <main className='w-full flex justify-between items-start h-full p-8 bg-blue-gray-50'>
       
       <nav className='w-1/12 h-full'>
         <Navbar />
