@@ -17,8 +17,8 @@ const DuahConent = ({ staticData, dynamicData }) => {
     // console.log('staticData,dynamicData', staticData, dynamicData)
     const [open, setOpen] = useState(false)
     const [clientSideData, setClientSideData] = useState([]);
-    const { user } = useContext(DuaContext)
-    console.log('user', user)
+    const { duas } = useContext(DuaContext)
+    console.log('duas', duas)
 
     // const catId = localStorage.getItem('catId') 
     // const catId = typeof window !== "undefined" ? window.localStorage.getItem('catId') || '' : false;
@@ -28,7 +28,7 @@ const DuahConent = ({ staticData, dynamicData }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/category/${user}`);
+                const response = await axios.get(`http://localhost:5000/category/${duas}`);
                 console.log('response', response)
                 setClientSideData(response.data);
             } catch (error) {
@@ -37,7 +37,7 @@ const DuahConent = ({ staticData, dynamicData }) => {
         };
 
         fetchData();
-    }, [user]);
+    }, [duas]);
 
 
 

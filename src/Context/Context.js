@@ -12,13 +12,13 @@ const DuaReducer = (state, action) => {
     switch (action.type) {
         case "DUA_START":
             return {
-                user: null,
+                duas: null,
                 loading: true,
                 error: null,
             };
         case "DUA_SUCCESS":
             return {
-                user: action.payload,
+                duas: action.payload,
                 loading: false,
                 error: null,
             };
