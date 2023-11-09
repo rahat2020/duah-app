@@ -8,7 +8,7 @@ const Navbar = () => {
         <Image src="/assets/logo.png" width={60} height={60} alt="logo" loading='lazy' />
       </div>
 
-      <div class="justify-center items-center  cursor-pointer my-2 flex flex-row w-full rounded-lg group">
+      <div className="justify-center items-center  cursor-pointer my-2 flex flex-row w-full rounded-lg group">
         <div className=" w-1 rounded-tl-lg rounded-bl-lg "></div>
         <div className="p-2 flex flex-row justify-center items-center">
           <div className=" bg-icon-bg dark:bg-dark-bg-dark flex p-2 rounded-full items-center justify-center">
@@ -17,7 +17,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div class="justify-center items-center  cursor-pointer my-2 flex flex-row w-full rounded-lg group">
+      <div className="justify-center items-center  cursor-pointer my-2 flex flex-row w-full rounded-lg group">
         <div className=" w-1 rounded-tl-lg rounded-bl-lg "></div>
         <div className="p-2 flex flex-row justify-center items-center">
           <div className=" bg-icon-bg dark:bg-dark-bg-dark flex p-2 rounded-full items-center justify-center">
@@ -26,7 +26,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div class="justify-center items-center  cursor-pointer my-2 flex flex-row w-full rounded-lg group">
+      <div className="justify-center items-center  cursor-pointer my-2 flex flex-row w-full rounded-lg group">
         <div className=" w-1 rounded-tl-lg rounded-bl-lg "></div>
         <div className="p-2 flex flex-row justify-center items-center">
           <div className=" bg-icon-bg dark:bg-dark-bg-dark flex p-2 rounded-full items-center justify-center">
@@ -35,7 +35,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div class="justify-center items-center  cursor-pointer my-2 flex flex-row w-full rounded-lg group">
+      <div className="justify-center items-center  cursor-pointer my-2 flex flex-row w-full rounded-lg group">
         <div className=" w-1 rounded-tl-lg rounded-bl-lg "></div>
         <div className="p-2 flex flex-row justify-center items-center">
           <div className=" bg-icon-bg dark:bg-dark-bg-dark flex p-2 rounded-full items-center justify-center">
@@ -44,7 +44,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div class="justify-center items-center  cursor-pointer my-2 flex flex-row w-full rounded-lg group">
+      <div className="justify-center items-center  cursor-pointer my-2 flex flex-row w-full rounded-lg group">
         <div className=" w-1 rounded-tl-lg rounded-bl-lg "></div>
         <div className="p-2 flex flex-row justify-center items-center">
           <div className=" bg-icon-bg dark:bg-dark-bg-dark flex p-2 rounded-full items-center justify-center">
@@ -53,7 +53,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div class="justify-center items-center  cursor-pointer my-2 flex flex-row w-full rounded-lg group">
+      <div className="justify-center items-center  cursor-pointer my-2 flex flex-row w-full rounded-lg group">
         <div className=" w-1 rounded-tl-lg rounded-bl-lg "></div>
         <div className="p-2 flex flex-row justify-center items-center">
           <div className=" bg-icon-bg dark:bg-dark-bg-dark flex p-2 rounded-full items-center justify-center">
@@ -61,7 +61,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div class="justify-center items-center  cursor-pointer my-2 flex flex-row w-full rounded-lg group">
+      <div className="justify-center items-center  cursor-pointer my-2 flex flex-row w-full rounded-lg group">
         <div className=" w-1 rounded-tl-lg rounded-bl-lg "></div>
         <div className="p-2 flex flex-row justify-center items-center">
           <div className=" bg-icon-bg dark:bg-dark-bg-dark flex p-2 rounded-full items-center justify-center">

@@ -9,13 +9,35 @@ import {
 import SearchIcon from '@mui/icons-material/Search';
 import Image from 'next/image';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import axios from 'axios';
 
-const LeftSidebar = () => {
-  const [open, setOpen] = useState(1);
-  const handleOpen = (value) => setOpen(open === value ? 0 : value);
+
+const LeftSidebar = ({ data, singleCategoryDua }) => {
+  console.log('singleCategoryDua', singleCategoryDua)
+
+  const [open, setOpen] = useState(0);
+  const toggleAccordion = (index) => {
+    setOpen((prevIndex) => (prevIndex === index ? null : index));
+  };
+
+  // fetching subcategory data
+
+  const [catId, setCatId] = useState(1);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`http://localhost:5000/subcategory/${catId}/${7}`);
+        console.log('API data:', response.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
-    <div className='h-screen ml-4'>
+    <div className='h-full ml-4'>
       <div className=" flex flex-col justify-start items-start">
         <div className="flex justify-start items-start text-left">
           <h2 className='text-base py-4 text-blue-gray-800 font-bold text-left'>Duas Page</h2>
@@ -43,27 +65,55 @@ const LeftSidebar = () => {
               </div>
             </div>
           </div>
-          <div className='p-2'>
-            <Accordion open={open === 1}>
-              <AccordionHeader onClick={() => handleOpen(1)} className='rounded-xl text-xl p-2 bg-custom-blue-gray'>
-                <div className="flex justify-start items-start">
-                  <div className="bg-custom-catgoryImg-gray p-1 rounded-lg">
-                    <Image src="/assets/fever.png" alt="fever" width={40} height={40} loading="lazy" />
+
+          {/*  overflow scroll start here*/}
+          <div className='p-2 max-h-[400px] overflow-auto'>
+            <div>
+              {data.map((item, index) => (
+                <div key={index} className={`border-b rounded-xl text-xl p-2 ${open === index ? 'bg-custom-blue-gray' : ''}`} 
+                onClick={setCatId(item?.cat_id)}>
+                  <div
+                    className="flex justify-between items-center p-4 cursor-pointer"
+                    onClick={() => toggleAccordion(index)}
+                  >
+                    <div className="flex justify-start items-start">
+                      <div className="bg-custom-catgoryImg-gray p-1 rounded-lg">
+                        <Image src="/assets/fever.png" alt="fever" width={40} height={40} loading="lazy" />
+                      </div>
+                      <div className="flex justify-start items-start ms-4 flex-col">
+                        <p className='text-base font-semibold text-blue-gray-800 style-inter-cat dark:text-dark-text sm:text-mss'>
+                          {item?.cat_name_en}
+                        </p>
+                        <small className='text-gray-500 text-xs mt-1 dark:text-dark-text xs:text-[11px]'>
+                          Subcategory: {item?.no_of_subcat}
+                        </small>
+                      </div>
+                    </div>
+                    <div className='flex flex-col justify-center items-center'>
+                      <p className='text-sm text-blue-gray-800 font-semibold'>{item?.no_of_dua}</p>
+                      <span className='text-sm text-gray-500 font-medium dark:text-dark-text xs:text-[11px]'>Duas</span>
+                    </div>
                   </div>
-                  <div className="flex justify-start items-start ms-4 flex-col">
-                    <p className='text-base style-kalpurush text-blue-gray-900 style-inter-cat dark:text-dark-text sm:text-mss'>Dua's Importance</p>
-                    <small className='text-gray-500 text-xs mt-1 dark:text-dark-text xs:text-[11px]'>Subcategory: 7 </small>
-                  </div>
+                  {open === index && (
+                    <div className=" ml-5 border-l-2 border-dotted my-2 border-success">
+                      <div className="flex border-dotted flex-col justify-start items-start gap-y-2 ml-3 ">
+                        <div className="flex flex-row my-2">
+                          <div className="bg-custom-green -translate-x-4 mt-1.5 w-1.5 rounded-full h-1.5"></div>
+                          <div className="flex flex-col justify-start items-start">
+                            <p className='text-[.88rem] text-blue-gray-800 cursor-pointer font-semibold text-left dark:text-dark-text xs:text-2xs '>
+                              Those whose duas are accepted
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  )}
                 </div>
-              </AccordionHeader>
-              <AccordionBody>
-                We&apos;re not always in the position that we want to be at. We&apos;re constantly
-              </AccordionBody>
-            </Accordion>
+              ))}
+            </div>
           </div>
-
-
-
+          {/*  overflow scroll ends here*/}
         </div>
       </div>
 
@@ -72,3 +122,4 @@ const LeftSidebar = () => {
 }
 
 export default LeftSidebar
+

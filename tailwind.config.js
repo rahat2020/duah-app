@@ -10,13 +10,16 @@ module.exports = withMT(
     theme: {
       extend: {
         backgroundColor: {
-          'custom-green': '#1FA45B', 
-          'custom-blue-gray': '#E8F0F5', 
-          'custom-searchBtn-gray': '#F3F4F6', 
-          'custom-catgoryImg-gray': '#F7F8FA', 
+          'custom-green': '#1FA45B',
+          'custom-blue-gray': '#E8F0F5',
+          'custom-searchBtn-gray': '#F3F4F6',
+          'custom-catgoryImg-gray': '#F7F8FA',
         },
         colors: {
-          'success':'#1FA45B'
+          'success': '#1FA45B'
+        },
+        border: {
+          'success': '#1FA45B'
         }
       },
     },

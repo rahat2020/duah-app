@@ -11,7 +11,8 @@ import {
 import Image from 'next/image';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
-const DuahConent = () => {
+const DuahConent = ({data}) => {
+    console.log('DuahConent',data)
     return (
         <div className='ml-4'>
             <div className=" items-end flex justify-end gap-x-2 lg:flex p-2">
@@ -77,19 +78,19 @@ const DuahConent = () => {
                             </div>
                             <div className=" w-64 flex items-center flex-row justify-between gap-x-8 xs:gap-x-6">
                                 <div className="relative w-6 h-6 flex justify-center items-center">
-                                    <Image src="/assets/copy.png" width={15} height={10} className='object-cover cursor-pointer' />
+                                    <Image src="/assets/copy.png" alt="icons"  width={15} height={10} className='object-cover cursor-pointer' />
                                 </div>
                                 <div className="relative w-6 h-6 flex justify-center items-center">
-                                    <Image src="/assets/save.png" width={15} height={10} className='object-cover cursor-pointer' />
+                                    <Image src="/assets/save.png" alt="icons"  width={15} height={10} className='object-cover cursor-pointer' />
                                 </div>
                                 <div className="relative w-6 h-6 flex justify-center items-center">
-                                    <Image src="/assets/light.png" width={15} height={10} className='object-cover cursor-pointer' />
+                                    <Image src="/assets/light.png"  alt="icons" width={15} height={10} className='object-cover cursor-pointer' />
                                 </div>
                                 <div className="relative w-6 h-6 flex justify-center items-center">
-                                    <Image src="/assets/share.png" width={15} height={10} className='object-cover cursor-pointer' />
+                                    <Image src="/assets/share.png"  alt="icons" width={15} height={10} className='object-cover cursor-pointer' />
                                 </div>
                                 <div className="relative w-6 h-6 flex justify-center items-center">
-                                    <Image src="/assets/report.png" width={15} height={10} className='object-cover cursor-pointer' />
+                                    <Image src="/assets/report.png" alt="icons"  width={15} height={10} className='object-cover cursor-pointer' />
                                 </div>
                             </div>
 

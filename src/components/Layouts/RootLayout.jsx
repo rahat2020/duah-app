@@ -3,7 +3,8 @@ import Navbar from '../global/Navbar'
 import LeftSidebar from '../global/LeftSidebar'
 import RightSidebar from '../global/RightSidebar'
 
-const RootLayout = ({ children }) => {
+const RootLayout = ({ children,data }) => {
+  console.log('cat', data)
 
   return (
     <main className='w-full flex justify-between items-start h-full p-8 bg-blue-gray-50'>
@@ -12,7 +13,7 @@ const RootLayout = ({ children }) => {
         <Navbar />
       </nav>
       <aside className="w-3/12 h-full">
-        <LeftSidebar />
+        <LeftSidebar data={data}/>
       </aside>
       <section className="w-6/12 h-full ">
         {children}
@@ -25,3 +26,5 @@ const RootLayout = ({ children }) => {
 }
 
 export default RootLayout
+
+
