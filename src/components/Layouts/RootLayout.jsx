@@ -4,11 +4,10 @@ import LeftSidebar from '../global/LeftSidebar'
 import RightSidebar from '../global/RightSidebar'
 
 const RootLayout = ({ children,data }) => {
-  console.log('cat', data)
+  // console.log('cat', data)
 
   return (
     <main className='w-full flex justify-between items-start h-full p-8 bg-blue-gray-50'>
-      
       <nav className='w-1/12 h-full'>
         <Navbar />
       </nav>
