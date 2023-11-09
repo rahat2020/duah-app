@@ -26,17 +26,6 @@ const LeftSidebar = ({ data }) => {
   const [catId, setCatId] = useState(1);
   const [subcatId, setSubCatId] = useState(7);
   const [catData, setCatData] = useState([])
-  // console.log('catId', catId)
-  // console.log('subcatId', subcatId)
-  // console.log('catData', catData)
-
-
-
-
-
-  useEffect(() => {
-    // localStorage.setItem('catId', catId)
-  }, [catId])
 
   useEffect(() => {
     const fetchData = async () => {

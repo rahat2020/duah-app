@@ -13,16 +13,13 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import axios from 'axios';
 import { DuaContext } from '@/Context/Context';
 
-const DuahConent = ({ staticData, dynamicData }) => {
+const DuahConent = () => {
     // console.log('staticData,dynamicData', staticData, dynamicData)
     const [open, setOpen] = useState(false)
     const [clientSideData, setClientSideData] = useState([]);
     const { duas } = useContext(DuaContext)
     console.log('duas', duas)
 
-    // const catId = localStorage.getItem('catId') 
-    // const catId = typeof window !== "undefined" ? window.localStorage.getItem('catId') || '' : false;
-    // console.log('catId from dua', catId)
     console.log('clientSideData', clientSideData)
 
     useEffect(() => {
@@ -148,22 +145,3 @@ const DuahConent = ({ staticData, dynamicData }) => {
 
 export default DuahConent
 
-
-// export const getStaticPaths = async () => {
-//     const paths = await fetchDynamicPaths();
-
-//     return {
-//       paths,
-//       fallback: true,
-//     };
-//   };
-
-export const getStaticProps = async ({ params }) => {
-    const staticData = await fetchStaticData();
-    return {
-        props: {
-            // staticData,
-            dynamicData: params.slug,
-        },
-    };
-};
